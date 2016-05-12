@@ -10,7 +10,9 @@ angular.module('bonjourappsApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
-  'validation.match'
+  'validation.match',
+  'ngMaterial',
+  'ngMessages'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
