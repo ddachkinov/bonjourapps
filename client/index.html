@@ -9,7 +9,8 @@
     <base href="/">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <!--<meta name="viewport" content="width=device-width">-->
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
@@ -24,6 +25,7 @@
       <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
       <link rel="stylesheet" href="app/main/main.css">
+      <link rel="stylesheet" href="app/restaurant/restaurant.css">
       <link rel="stylesheet" href="components/footer/footer.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
@@ -76,18 +78,20 @@
     <!-- build:js(.tmp) app/app.js -->
       <script src="app/app.js"></script>
       <!-- injector:js -->
-      <script src="app/admin/admin.module.js"></script>
       <script src="components/auth/auth.module.js"></script>
+      <script src="app/admin/admin.module.js"></script>
       <script src="components/util/util.module.js"></script>
-      <script src="components/auth/auth.service.js"></script>
+      <script src="app/account/signup/signup.controller.js"></script>
       <script src="app/admin/admin.controller.js"></script>
       <script src="app/account/account.js"></script>
       <script src="app/admin/admin.router.js"></script>
       <script src="app/app.constant.js"></script>
       <script src="app/main/main.controller.js"></script>
       <script src="app/main/main.js"></script>
-      <script src="app/account/settings/settings.controller.js"></script>
+      <script src="app/restaurant/restaurant.controller.js"></script>
+      <script src="app/restaurant/restaurant.js"></script>
       <script src="app/account/login/login.controller.js"></script>
+      <script src="components/auth/auth.service.js"></script>
       <script src="components/auth/interceptor.service.js"></script>
       <script src="components/auth/router.decorator.js"></script>
       <script src="components/auth/user.service.js"></script>
@@ -97,7 +101,7 @@
       <script src="components/navbar/navbar.controller.js"></script>
       <script src="components/navbar/navbar.directive.js"></script>
       <script src="components/socket/socket.service.js"></script>
-      <script src="app/account/signup/signup.controller.js"></script>
+      <script src="app/account/settings/settings.controller.js"></script>
       <script src="components/util/util.service.js"></script>
       <!-- endinjector -->
     <!-- endbuild -->

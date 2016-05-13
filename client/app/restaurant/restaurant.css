@@ -1,0 +1,45 @@
+.navbar-text {
+  margin-left: 15px;
+}
+
+.btn-sq-lg {
+  width: 150px !important;
+  height: 150px !important;
+}
+
+.btn-sq {
+  width: 100px !important;
+  height: 100px !important;
+  font-size: 14px;
+}
+
+.btn-sq-sm {
+  width: 100px !important;
+  height: 100px !important;
+  font-size: 100px;
+}
+
+.btn-sq-xs {
+  width: 50px !important;
+  height: 50px !important;
+  padding:100px;
+}
+
+.mainbutton{
+  margin:19px;
+  background-color: #4393B9;
+  text-align: center;
+}
+.mainbuttonFA{
+  color:white;
+  text-align: center;
+}
+
+#bon-center-menu{
+  text-align: center;
+}
+
+#bon-row{
+  padding-right:0;
+  padding-left: 0;
+}
