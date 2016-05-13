@@ -20,6 +20,7 @@
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   background: #4393B9;
+  margin-bottom: 19px;
 }
 
 .navbar-text {
@@ -51,6 +52,12 @@
 
 .mainbutton{
   margin:19px;
+  background-color: #4393B9;
+  text-align: center;
+}
+.mainbuttonFA{
+  color:white;
+  text-align: center;
 }
 
 #bon-center-menu{
