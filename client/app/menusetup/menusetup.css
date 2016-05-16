@@ -1,0 +1,10 @@
+#banner-ms{
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#banner-ms h1{
+  font-size: 25px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
