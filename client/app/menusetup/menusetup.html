@@ -1,7 +1,29 @@
-<header class="res-header" id="banner-ms">
-  <div class="container">
-    <h1 class="fa fa-cogs"> Настройка на артикули</h1>
-    <img src="" alt="">
-  </div>
-</header>
-<div>This is the menusetup view.</div>
+    <header class="res-header" id="banner-ms">
+      <div class="container">
+        <h1 class="fa fa-cogs"> Настройка на артикули</h1>
+        <img src="" alt="">
+      </div>
+    </header>
+    <div layout="column" layout-padding ng-cloak>
+        <md-content class="autoScroll">
+        <md-input-container class="md-icon-float md-block">
+          <!-- Use floating label instead of placeholder -->
+          <label>Наименование</label>
+          <input ng-model="menuitems.name" type="text">
+        </md-input-container>
+        <md-input-container md-no-float class="md-block">
+          <input ng-model="user.phone" type="text" placeholder="Phone Number">
+        </md-input-container>
+        <md-input-container class="md-block">
+          <!-- Use floating placeholder instead of label -->
+          <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+        </md-input-container>
+        <md-input-container md-no-float class="md-block">
+          <input ng-model="user.address" type="text" placeholder="Address" >
+        </md-input-container>
+        <md-input-container class="md-icon-float md-icon-right md-block">
+          <label>Donation Amount</label>
+          <input ng-model="user.donation" type="number" step="0.01">
+        </md-input-container>
+      </md-content>
+    </div>
