@@ -16,7 +16,7 @@ Menuitem.find({}).remove()
       kitchen: true,
       category: 'Салати',
       description: 'Краставици, домати, лук, чушка, сирене',
-      imgUrl:''
+      menuitemUrl:''
     }, {
       name: 'Овчарска салата',
       price: 5.10,
@@ -24,42 +24,42 @@ Menuitem.find({}).remove()
       kitchen: true,
       category: 'Салати',
       description: 'Краставици, домати, лук, чушка, сирене, кашкавал, яйце, колбас',
-      imgUrl:''
+      menuitemUrl:''
     }, {
       name: 'Специалитет Бонжур',
       price: 5.10,
       active: true,
       kitchen: true,
       category: 'Основни ястия',
-      imgUrl:''
+      menuitemUrl:''
     }, {
       name: 'Средногорска скара',
       price: 13.50,
       active: true,
       kitchen: true,
       category: 'Основни ястия',
-      imgUrl:''
+      menuitemUrl:''
     }, {
       name: 'Бутилка вино',
       price: 14,
       active: true,
       kitchen: false,
       category: 'Напитки',
-      imgUrl:''
+      menuitemUrl:''
     }, {
       name: 'Шампанско',
       price: 12,
       active: true,
       kitchen: false,
       category: 'Напитки',
-      imgUrl:''
+      menuitemUrl:''
     }, {
       name: 'Фанта',
       price: 1.40,
       active: false,
       kitchen: false,
       category: 'Напитки',
-      imgUrl:''
+      menuitemUrl:''
     })
     .then(() => {
       console.log('finished populating menuitems');

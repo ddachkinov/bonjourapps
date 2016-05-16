@@ -10,7 +10,7 @@ var MenuitemSchema = new mongoose.Schema({
   kitchen: Boolean,
   category: String,
   description: String,
-  imgUrl: String
+  menuitemUrl: String
 });
 
 export default mongoose.model('Menuitem', MenuitemSchema);

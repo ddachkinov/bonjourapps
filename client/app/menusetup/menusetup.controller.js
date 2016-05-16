@@ -3,7 +3,7 @@
 
 class MenusetupComponent {
   constructor() {
-    this.message = 'Hello';
+    
   }
 }
 
@@ -14,16 +14,5 @@ angular.module('bonjourappsApp')
   });
 
 
-
-app.directive('back', ['$window', function($window) {
-        return {
-            restrict: 'A',
-            link: function (scope, elem, attrs) {
-                elem.bind('click', function () {
-                    $window.history.back();
-                });
-            }
-        };
-    }]);
 
 })();
