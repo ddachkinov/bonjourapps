@@ -6,18 +6,21 @@
       </div>
     </header>
       <div ng-cloak>
-          <md-content flex-xs="100"  flex-offset-md="10" flex="80">
+          <md-content flex-xs="100" flex-offset-xs="0" flex-offset-sm="0" flex-sm="100"  flex-offset="15" flex="70">
             <md-tabs md-dynamic-height md-border-bottom md-swipe-content="true">
               <md-tab label="всички артикули">
                 <md-content class="md-padding">
               <!--    <h1 class="md-display-2">Всички артикули</h1> -->
                   <md-list>
                     <md-list-item class="md-2-line" ng-repeat="menuitem in menuitems" ng-href="#">
-                        <img ng-src="{{menuitem.menuitemUrl}}" alt="{{ menuitem.category }}" class="md-avatar">
+                        <img ng-src="{{menuitem.menuitemUrl}}" alt="снимка" class="md-avatar">
                         <div class="md-list-item-text" layout="column">
                         <h3>{{ menuitem.name }}</h3>
-                        <p>{{ menuitem.description }}</p>
+                        <p>{{ menuitem.price }} лв.</p>
                       </div>
+                      <md-button class="md-icon-button" aria-label="Промени" ng-click="editMenuitem(menuitem)">
+                        <i class="fa fa-pencil"></i>
+                      </md-button>
                         <md-divider></md-divider>
                     </md-list-item>
                   </md-list>
@@ -29,19 +32,19 @@
 
 
                         <md-content class="autoScroll" flex-offset="5" flex="90">
-                          <form>
+                          <form name="newmenuitemForm">
                             <md-input-container class="md-icon-float md-block">
                                 <!-- Use floating label instead of placeholder -->
                                 <label>Наименование</label>
-                                <input ng-model="newMenuitem.name" type="text">
+                                <input required ng-model="newMenuitem.name" type="text">
                             </md-input-container>
                             <md-input-container md-no-float class="md-block">
                                 <label>Цена</label>
-                                <input ng-model="newMenuitem.price" type="text" >
+                                <input required ng-model="newMenuitem.price" type="text" >
                             </md-input-container>
                             <md-input-container md-no-float class="md-block">
                                 <label>Категория</label>
-                                <input ng-model="newMenuitem.category" type="text" >
+                                <input required ng-model="newMenuitem.category" type="text" >
                             </md-input-container>
                             <md-input-container md-no-float class="md-block">
                                 <label>Описание</label>
@@ -51,7 +54,7 @@
                                 <label>линк към снимка</label>
                                 <input ng-model="newMenuitem.menuitemUrl" type="text" >
                             </md-input-container>
-                            <md-button class="md-raised md-primary" ng-click="addnewMenuitem()">
+                            <md-button class="md-raised md-primary" ng-click="addnewMenuitem()" ng-disabled="newmenuitemForm.$invalid">
                           <i class="fa fa-plus"> Добави</i>
                             </md-button>
                           </form>

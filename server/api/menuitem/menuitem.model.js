@@ -13,4 +13,5 @@ var MenuitemSchema = new mongoose.Schema({
   menuitemUrl: String
 });
 
+
 export default mongoose.model('Menuitem', MenuitemSchema);
