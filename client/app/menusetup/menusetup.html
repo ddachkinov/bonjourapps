@@ -6,18 +6,20 @@
     </header>
       <div ng-cloak>
           <md-content>
-            <md-tabs md-dynamic-height md-border-bottom>
+            <md-tabs md-dynamic-height md-border-bottom md-swipe-content="true">
               <md-tab label="всички артикули">
                 <md-content class="md-padding">
-                  <h1 class="md-display-2">Всички артикули</h1>
+              <!--    <h1 class="md-display-2">Всички артикули</h1> -->
                   <md-list>
-                    <md-list-item class="md-3-line" ng-repeat="menuitem in menuitems" ng-click="">
-                        <img ng-src="{{menuitem.menuitemUrl}}" alt="MEAN" style="max-height:120px; height: auto; margin-right:20px;margin-top:10px;">                          <div class="md-list-item-text" layout="column">
-                        <h3>{{ Menuitem.name }}</h3>
-                        <h4>{{ menuitem.category }}</h4>
+                    <md-list-item class="md-2-line" ng-repeat="menuitem in menuitems" ng-href="#">
+                        <img ng-src="{{menuitem.menuitemUrl}}" alt="{{ menuitem.category }}" class="md-avatar">
+                        <div class="md-list-item-text" layout="column">
+                        <h3>{{ menuitem.name }}</h3>
                         <p>{{ menuitem.description }}</p>
                       </div>
+                        <md-divider></md-divider>
                     </md-list-item>
+                  </md-list>
                 </md-content>
               </md-tab>
               <md-tab label="Добави нов">

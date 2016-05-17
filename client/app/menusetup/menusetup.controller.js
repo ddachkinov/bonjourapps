@@ -2,9 +2,10 @@
 (function(){
 
 class MenusetupComponent {
-  constructor($scope, menusetupService) {
+  constructor($scope, menusetupService, socket) {
     menusetupService.query(function(menuitems){
       $scope.menuitems = menuitems;
+      socket.syncUpdates('menuitem', $scope.menuitems);
     });
 
       $scope.addnewMenuitem = function () {
@@ -13,6 +14,9 @@ class MenusetupComponent {
                 $scope.newMenuitem = {};
         })
      };
+      $scope.goBack = function(){
+        window.history.back();
+      };
     };
   }
 angular.module('bonjourappsApp')

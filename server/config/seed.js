@@ -38,7 +38,7 @@ Menuitem.find({}).remove()
       active: true,
       kitchen: true,
       category: 'Основни ястия',
-      menuitemUrl:''
+      menuitemUrl:'http://bonjour-bg.com/wp-content/uploads//2014/09/gallery41_h600.jpg'
     }, {
       name: 'Бутилка вино',
       price: 14,
