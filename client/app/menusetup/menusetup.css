@@ -8,3 +8,8 @@
   line-height: 1;
   letter-spacing: -1px;
 }
+
+.res-menutop{
+  float: left;
+  padding-top: 15px;
+}

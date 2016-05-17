@@ -3,7 +3,7 @@
 (function() {
 
 class AdminController {
-  constructor(User) {
+  constructor(User, $scope) {
     // Use the User $resource to fetch all users
     this.users = User.query();
   }
