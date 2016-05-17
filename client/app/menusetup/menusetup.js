@@ -5,6 +5,6 @@ angular.module('bonjourappsApp')
     $stateProvider
       .state('menusetup', {
         url: '/restaurant/menusetup',
-        template: '<menusetup></menusetup>',
+        template: '<menusetup></menusetup>'
       });
   });
