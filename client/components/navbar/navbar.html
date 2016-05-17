@@ -14,14 +14,15 @@
         <li ng-repeat="item in nav.menu" ui-sref-active="active">
             <a ui-sref="{{item.state}}">{{item.title}}</a>
         </li>
-        <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
+        <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Потребители</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Регистрирай се</a></li>
+<!--    <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Регистрирай се</a></li>  -->
         <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Влез</a></li>
         <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Здравей {{ nav.getCurrentUser().name }}</p> </li>
         <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li ng-show="nav.isLoggedIn()"><a ui-sref="restaurant">Главно меню</a></li>
         <li ng-show="nav.isLoggedIn()"><a ui-sref="logout">Излез</a></li>
       </ul>
     </div>

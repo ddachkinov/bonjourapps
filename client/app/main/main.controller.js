@@ -12,6 +12,7 @@ class MainController {
 //    $scope.$on('$destroy', function() {
 //      socket.unsyncUpdates('thing');
 //    });
+
  }
 
 //  $onInit() {
