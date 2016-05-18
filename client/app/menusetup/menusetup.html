@@ -10,15 +10,17 @@
             <md-tabs md-dynamic-height md-border-bottom md-swipe-content="true">
               <md-tab label="всички артикули">
                 <md-content class="md-padding">
-              <!--    <h1 class="md-display-2">Всички артикули</h1> -->
+              <!--    <h1 class="md-display-2">Всички артикули</h1>
+              ng-click="goToMenuitem(menuitem)"
+            -->
                   <md-list>
-                    <md-list-item ng-click="editMenuitem(menuitem)" class="md-2-line" ng-repeat="menuitem in menuitems">
+                    <md-list-item  class="md-2-line"  ng-repeat="menuitem in menuitems">
                         <img ng-src="{{menuitem.menuitemUrl}}" alt="снимка" class="md-avatar">
                         <div class="md-list-item-text" layout="column">
                         <h3>{{ menuitem.name }}</h3>
                         <p>{{ menuitem.price }} лв.</p>
                       </div>
-                      <md-button class="md-icon-button" aria-label="Промени" ng-click="editMenuitem(menuitem)">
+                      <md-button class="md-icon-button" aria-label="Промени" ui-sref="menusetup.details({id: menuitem._id})" ng-click="editMenuitem(menuitem)">
                         <i class="fa fa-pencil"></i>
                       </md-button>
                         <md-divider></md-divider>

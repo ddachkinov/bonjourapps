@@ -2,7 +2,7 @@
 (function(){
 
 class MenusetupComponent {
-  constructor($scope, menusetupService, socket, $stateParams) {
+  constructor($scope, menusetupService, socket, $stateParams, $state) {
     menusetupService.query(function(menuitems){
       $scope.menuitems = menuitems;
       socket.syncUpdates('menuitem', $scope.menuitems);
@@ -12,9 +12,9 @@ class MenusetupComponent {
         menusetupService.save($scope.newMenuitem, function (menuitem) {
           console.log($scope.newMenuitem);
                 $scope.newMenuitem = {};
-        })
+        });
      };
-    
+
       $scope.goBack = function(){
         window.history.back();
       };
@@ -26,6 +26,12 @@ class MenusetupComponent {
       $scope.undoMenuitemEdit = function(){
         $scope.editingMenuitem = undefined;
       };
+
+  //    $scope.goToMenuitem = function(menuitem) {
+//      $state.go('menusetup.details', {
+//        id: menuitem._id
+  //    });
+    //};
 
     };
   }
