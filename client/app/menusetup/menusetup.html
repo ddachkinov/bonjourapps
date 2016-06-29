@@ -14,11 +14,15 @@
               ng-click="goToMenuitem(menuitem)"
             -->
                   <md-list>
+<<<<<<< HEAD
                     <md-list-item  class="md-2-line"  ng-repeat="menuitem in menuitems">
                         <img ng-src="{{menuitem.menuitemUrl}}" alt="снимка" class="md-avatar">
+=======
+                    <md-list-item class="md-2-line" ng-repeat="menuitem in menuitems" ng-href="#">
+>>>>>>> 6d849f7... settings improved
                         <div class="md-list-item-text" layout="column">
                         <h3>{{ menuitem.name }}</h3>
-                        <p>{{ menuitem.price }} лв.</p>
+                        <p>{{ menuitem.price |number:2}} лв.</p>
                       </div>
                       <md-button class="md-icon-button" aria-label="Промени" ui-sref="menusetup.details({id: menuitem._id})" ng-click="editMenuitem(menuitem)">
                         <i class="fa fa-pencil"></i>
@@ -45,16 +49,18 @@
                                 <input required ng-model="newMenuitem.price" type="text" >
                             </md-input-container>
                             <md-input-container md-no-float class="md-block">
-                                <label>Категория</label>
-                                <input required ng-model="newMenuitem.category" type="text" >
+                              <label>Категория</label>
+                              <md-select  ng-model="newMenuitem.category" required>
+                                <md-option value="sal">Салата</md-option>
+                                <md-option value="main">Основно ястие</md-option>
+                                <md-option value="dri">Напитка</md-option>
+                                <md-option value="des">Десерт</md-option>
+                              </md-select>
                             </md-input-container>
+
                             <md-input-container md-no-float class="md-block">
                                 <label>Описание</label>
                                 <input ng-model="newMenuitem.description" type="text" >
-                            </md-input-container>
-                            <md-input-container md-no-float class="md-block">
-                                <label>линк към снимка</label>
-                                <input ng-model="newMenuitem.menuitemUrl" type="text" >
                             </md-input-container>
                             <md-button class="md-raised md-primary" ng-click="addnewMenuitem()" ng-disabled="newmenuitemForm.$invalid">
                           <i class="fa fa-plus"> Добави</i>

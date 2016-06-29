@@ -19,6 +19,7 @@ class MenusetupComponent {
         window.history.back();
       };
 
+<<<<<<< HEAD
       $scope.editMenuitem = function(menuitem){
         $scope.editingMenuitem = menuitem;
       };
@@ -32,6 +33,9 @@ class MenusetupComponent {
 //        id: menuitem._id
   //    });
     //};
+=======
+
+>>>>>>> 6d849f7... settings improved
 
     };
   }
@@ -40,6 +44,5 @@ angular.module('bonjourappsApp')
     templateUrl: 'app/menusetup/menusetup.html',
     controller: MenusetupComponent
   });
-
 
 })();
