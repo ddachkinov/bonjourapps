@@ -14,12 +14,7 @@
               ng-click="goToMenuitem(menuitem)"
             -->
                   <md-list>
-<<<<<<< HEAD
-                    <md-list-item  class="md-2-line"  ng-repeat="menuitem in menuitems">
-                        <img ng-src="{{menuitem.menuitemUrl}}" alt="снимка" class="md-avatar">
-=======
                     <md-list-item class="md-2-line" ng-repeat="menuitem in menuitems" ng-href="#">
->>>>>>> 6d849f7... settings improved
                         <div class="md-list-item-text" layout="column">
                         <h3>{{ menuitem.name }}</h3>
                         <p>{{ menuitem.price |number:2}} лв.</p>
